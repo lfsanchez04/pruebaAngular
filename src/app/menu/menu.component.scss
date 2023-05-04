@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  justify-content: right;
+  height: 36px;
+  width: 100%;
+  align-items: center;
+  color: white;
+ 
+  a{
+      cursor: pointer;
+      text-decoration: none;
+      margin-right: 20px;
+      color: white;
+      &:hover{
+          color: red;
+      }
+      &:focus{
+          color: red;
+      }
+  }
+
+  #icon{
+    display: flex;
+    margin-right: auto;
+  }
+}
+
+mat-toolbar{
+  background-color: #003CD1;
+}
+
+// mat-menu {
+//   button{
+//       color: white;
+//       background-color: #3f51b5;
+//       &:hover {
+//       background-color: darken(#3f51b5, 10%);
+//       }
+//   }
+// }

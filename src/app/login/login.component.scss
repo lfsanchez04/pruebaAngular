@@ -1,0 +1,12 @@
+.form{
+    display: flex;
+    margin-top: 5em !important;
+    place-content: center;
+    form{
+        display: inline-grid;
+    }
+    h1{
+        text-align: -webkit-center;
+        padding-top: 3em;
+    }
+}

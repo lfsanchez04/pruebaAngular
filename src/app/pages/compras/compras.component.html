@@ -1,0 +1,24 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <mat-form-field appearance="fill">
+                <mat-label>Producto</mat-label>
+                <mat-select formControlName="product" (selectionChange)="onProductChange()">
+                    <mat-option *ngFor="let product of products" [value]="product.id">
+                        {{ product.name }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br />
+            <mat-form-field appearance="fill">
+                <mat-label>Cantidad</mat-label>
+                <input matInput type="number" formControlName="quantity" />
+            </mat-form-field>
+            <br />
+            <button mat-raised-button>Comprar</button>
+        </form>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <img *ngIf="selectedProductImage" [src]="selectedProductImage" width="300px" height="300px" />
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,15 @@
+mat-grid-list{
+    margin-top: 2em;
+}
+
+form{
+    text-align-last: center;
+}
+
+button{
+    background-color: #003CD1 !important;
+    color: white !important;
+    &:hover{
+        background-color: #4979f1 !important;
+    }
+}

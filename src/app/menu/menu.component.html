@@ -1,0 +1,17 @@
+<mat-toolbar *ngIf="authService.logeado()">
+  <nav mat-tab-nav-bar yPosition="above">
+    <a id="icon" mat-menu-link (click)="authService.logout()">
+      <mat-icon>exit_to_app</mat-icon>
+    </a>
+    <a mat-menu-link [matMenuTriggerFor]="subMenuCompras">COMPRA</a>
+    <a mat-menu-link [matMenuTriggerFor]="subMenuVentas">VENTA</a>
+  </nav>
+  <mat-menu #subMenuCompras="matMenu" xPosition="before" yPosition="above">
+    <button mat-menu-item (click)="compras()">COMPRAR</button>
+    <button mat-menu-item (click)="proyectos()">PROYECTOS</button>
+  </mat-menu>
+
+  <mat-menu #subMenuVentas="matMenu" xPosition="before" yPosition="above">
+    <button mat-menu-item (click)="estadisticas()">ESTADISTICAS</button>
+  </mat-menu>
+</mat-toolbar>
